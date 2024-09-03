@@ -1,5 +1,4 @@
 const axios = require('axios');
-const dotenv=require('dotenv').config();
 
 const apiUrl ='http://localhost:8080';
 
