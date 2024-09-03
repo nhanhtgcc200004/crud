@@ -5,10 +5,9 @@ const apiUrl = 'http://localhost:3000';
 
 exports.homeRoutes = (req, res) => {
     // Make a get request to /api/users
-   
-    
     axios.get(apiUrl+'/api/users')
         .then(function(response){
+            alert("work");
             res.render('index', { users : response.data });
         })
         .catch(err =>{
