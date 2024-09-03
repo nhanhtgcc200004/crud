@@ -6,14 +6,14 @@ const apiUrl = 'http://localhost:3000';
 exports.homeRoutes = (req, res) => {
     // Make a get request to /api/users
    
-    res.send("test 001");
-    // axios.get(apiUrl+'/api/users')
-    //     .then(function(response){
-    //         res.render('index', { users : response.data });
-    //     })
-    //     .catch(err =>{
-    //         res.send(err);
-    //     })
+    
+    axios.get(apiUrl+'/api/users')
+        .then(function(response){
+            res.render('index', { users : response.data });
+        })
+        .catch(err =>{
+            res.send(err);
+        })
 
     
 }
