@@ -1,13 +1,13 @@
 const axios = require('axios');
+const dotenv=require('dotenv').config();
 
-const apiUrl = 'http://localhost:3000';
+const apiUrl =process.env.API_URL||'http://localhost:8080';
 
 
 exports.homeRoutes = (req, res) => {
     // Make a get request to /api/users
     axios.get(apiUrl+'/api/users')
         .then(function(response){
-            alert("work");
             res.render('index', { users : response.data });
         })
         .catch(err =>{
