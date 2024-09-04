@@ -1,7 +1,7 @@
 const axios = require('axios');
 const dotenv =require('dotenv').config();
 
-const apiUrl =process.env.apiUrl || 'http://localhost:8080';
+const apiUrl =process.env.apiUrl || 'http://localhost:3000';
 
 
 exports.homeRoutes = (req, res) => {
